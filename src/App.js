@@ -10,6 +10,7 @@ class App extends Component {
             monsters: [],
             searchField: '',
         }
+        this.onSearchChange = this.onSearchChange.bind(this);
     }
 
     async componentDidMount() {
@@ -29,7 +30,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                <SearchBox className='search-box' onChangeHandler={onSearchChange} placeholder='search monters'/>
+                <SearchBox className='monsters-search-box' onChangeHandler={onSearchChange} placeholder='search monters'/>
                 <CardList monsters={filteredMonsters} />
             </div>
         )
